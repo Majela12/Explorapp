@@ -66,6 +66,7 @@ fun RegisterScreen(
                 modifier = Modifier
                     .align(Alignment.Start)
                     .offset(x = (-12).dp)
+                    .clickable { onNavigateToLogin()}
             ) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
