@@ -11,6 +11,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import me.mariaherrera.exploraapp.ui.theme.ExploraAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,30 +21,24 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ExploraAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+            val mvNavController = rememberNavController()
+
+            NavHost(
+                navController = mvNavController,
+                startDestination = "Login",
+                modifier = Modifier.fillMaxSize()
+            ) {
+                composable (route = "Login") {
+                    LoginScreen(onLoginSuccess = {}, onNavigateToRegister = { })
+
                 }
+                composable (route = "register") {
+                    RegisterScreen(onRegisterSuccess = {}, onNavigateToLogin = { })
+
+                }
+
             }
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ExploraAppTheme {
-        Greeting("Android")
-    }
 }
