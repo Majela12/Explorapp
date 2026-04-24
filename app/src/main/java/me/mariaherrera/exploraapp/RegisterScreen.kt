@@ -228,7 +228,6 @@ fun RegisterScreen(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-
             }
 
             Spacer(modifier = Modifier.height(40.dp))
