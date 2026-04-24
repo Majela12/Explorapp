@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "727772208148",
+    "project_id": "loginfirebase-52236",
+    "storage_bucket": "loginfirebase-52236.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727772208148:android:4e878083b856821d72db01",
+        "android_client_info": {
+          "package_name": "me.mariaherrera.exploraapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5OIyX621jmtFGMlfuE37U194qqwYqFew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

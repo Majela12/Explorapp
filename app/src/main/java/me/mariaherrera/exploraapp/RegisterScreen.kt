@@ -228,16 +228,7 @@ fun RegisterScreen(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                SocialButton(
-                    text = "Google",
-                    modifier = Modifier.weight(1f),
-                    icon = Icons.Default.Email
-                )
-                SocialButton(
-                    text = "Apple",
-                    modifier = Modifier.weight(1f),
-                    icon = Icons.Default.Lock
-                )
+
             }
 
             Spacer(modifier = Modifier.height(40.dp))

@@ -15,6 +15,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import me.mariaherrera.exploraapp.ui.theme.ExploraAppTheme
+import me.mariaherrera.exploraapp.screens.HomeScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,24 +26,37 @@ class MainActivity : ComponentActivity() {
 
             NavHost(
                 navController = myNavController,
-                startDestination = "Login",
+                startDestination = "login",
                 modifier = Modifier.fillMaxSize()
             ) {
-                composable (route = "Login") {
-                    LoginScreen(onLoginSuccess = {}, onNavigateToRegister = {
-                        myNavController.navigate(route="register")
-                    })
+
+                composable("login") {
+                    LoginScreen(
+                        onSuccessfulLogin = {
+                            myNavController.navigate("home")
+                        },
+                        onNavigateToRegister = {
+                            myNavController.navigate("register")
+                        }
+                    )
                 }
-                composable (route = "register") {
-                    RegisterScreen(onRegisterSuccess = {}, onNavigateToLogin = {},
+
+                composable("register") {
+                    RegisterScreen(
+                        onRegisterSuccess = {},
+                        onNavigateToLogin = {
+                            myNavController.popBackStack()
+                        },
                         onBackClick = {
                             myNavController.popBackStack()
-                    })
-
+                        }
+                    )
                 }
 
+                composable("home") {
+                    HomeScreen()
+                }
             }
-
         }
     }
 
