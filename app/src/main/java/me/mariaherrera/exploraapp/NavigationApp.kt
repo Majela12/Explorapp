@@ -3,7 +3,7 @@ package me.mariaherrera.exploraapp
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.*
 import me.mariaherrera.exploraapp.screens.HomeScreen
-import me.mariaherrera.exploraapp.LoginScreen
+import me.mariaherrera.exploraapp.ui.elements.LoginScreen
 
 
 @Composable

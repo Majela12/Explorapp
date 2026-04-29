@@ -1,4 +1,4 @@
-package me.mariaherrera.exploraapp
+package me.mariaherrera.exploraapp.ui.elements
 
 import android.app.Activity
 import androidx.compose.foundation.background
@@ -29,7 +29,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.google.firebase.Firebase
-import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import me.mariaherrera.exploraapp.ui.theme.ExploraAppTheme
 
