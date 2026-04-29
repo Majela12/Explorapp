@@ -7,4 +7,5 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun AddTouristicPlaceScreen(){
     Text(fontSize = 50.sp, text = "ADD PLACE")
+
 }
